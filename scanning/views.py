@@ -16,10 +16,12 @@ def index(request):
     # We make use of the shortcut function to make our lives easier.
     # Note that the first parameter is the template we wish to use.
 
-    return render(request, 'Documents/newsite/templates/scanning/index.html',context_dict)
+    return render(request, '/Documents/newsite/templates/scanning/index.html',context_dict)
 
 def about(request):
     return HttpResponse("This site will be about scanning, photogrammetry and remote sensing <a href='/scanning/'>Index</a>")
 
 
+def scanners(request):
+    return render(request, '/Documents/newsite/templates/scanning/scanners.html')
 
