@@ -9,6 +9,32 @@
     <h1> Scanning</h1>
     <h1> Photogrammetry</h1>
     <h1> Remote sensing</h1>
+<<<<<<< HEAD
+
+    <p>Baza danych:</p>
+
+    {% if categories %}
+    <ol>
+                {% for category in categories %}
+                <li> <a href={{ category.url }}>{{ category.title }}</a> </br> </li>
+                <!-- <li>{{ category.title }} </br> {{ category.url }}</li>-->
+                {% endfor %}
+            </ol>
+        {% else %}
+            <strong>There are no categories present.</strong>
+        {% endif %}
+
+    Lista mozliwosci:
+    <form action="...">
+	<select name="nazwa">
+        {% for category in categories %}
+        <option>{{ category.title }}</option>
+        {% endfor %}
+<!-- 		<option>Skaning</option>
+		<option>Fotogrametria</option>
+		<option>o mnie</option>
+        <option>kontakt</option> -->
+=======
     Lista mozliwosci:
     <form action="...">
 	<select name="nazwa">
@@ -16,6 +42,7 @@
 		<option>Fotogrametria</option>
 		<option>o mnie</option>
         <option>kontakt</option>
+>>>>>>> 26b00b2f6542fe123b9fd5420c36e72e3c5dc52d
 	</select>
 </form>
     <strong>{{ boldmessage }}</strong></br>Welcome to site about 3D scanning <br/> <a href='/scanning/about'>About</a> </br>
